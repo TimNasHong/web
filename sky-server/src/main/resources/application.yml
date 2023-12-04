@@ -12,13 +12,19 @@ spring:
       url: jdbc:mysql://${sky.datasource.host}:${sky.datasource.port}/${sky.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${sky.datasource.username}
       password: ${sky.datasource.password}
+  redis:
+    host: ${sky.redis.host}
+    password: ${sky.redis.password}
+    database: ${sky.redis.database}
+    port: ${sky.redis.port}
+
 
 mybatis:
-  #mapper配置文件
+
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.sky.entity
   configuration:
-    #开启驼峰命名
+
     map-underscore-to-camel-case: true
 
 logging:
@@ -31,9 +37,27 @@ logging:
 
 sky:
   jwt:
-    # 设置jwt签名加密时使用的秘钥
+
     admin-secret-key: itcast
-    # 设置jwt过期时间
+
     admin-ttl: 7200000
-    # 设置前端传递过来的令牌名称
+
     admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    endpoint: ${sky.alioss.endpoint}
+    bucket-name: ${sky.alioss.bucket-name}
+    access-key-secret: ${sky.alioss.access-key-secret}
+    access-key-id: ${sky.alioss.access-key-id}
+  wechat:
+    appid: ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
+    mch-serial-no: ${sky.wechat.mch-serial-no}
+    mchid: ${sky.wechat.mchid}
+    private-key-file-path: ${sky.wechat.private-key-file-path}
+    api-v3-key: ${sky.wechat.api-v3-key}
+    we-chat-pay-cert-file-path: ${sky.wechat.we-chat-pay-cert-file-path}
+    notify-url: ${sky.wechat.notify-url}
+    refund-notify-url: ${sky.wechat.refund-notify-url}

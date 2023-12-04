@@ -5,4 +5,26 @@ sky:
     port: 3306
     database: sky_take_out
     username: root
-    password: root
+    password: "123456"
+  alioss:
+    access-key-id: LTAI5tJwe8MDDCQf61zs9VJ7
+    access-key-secret: 4oBbbn5igq9HhkgU9sCFhnHa6YNRwc
+    bucket-name: nas-han-web
+    endpoint: oss-cn-beijing.aliyuncs.com
+  redis:
+    host: localhost
+    password: 123456
+    database: 0
+    port: 6379
+  wechat:
+    appid: wxe85c9dff84517fd7
+    secret: 06412997451a579cf70a94fa74665790
+    mchid:
+    api-v3-key:
+    mch-serial-no:
+    private-key-file-path:
+    we-chat-pay-cert-file-path:
+    notify-url: https://6bb25181.r8.cpolar.top/notify/paySuccess
+    refund-notify-url:
+
+
